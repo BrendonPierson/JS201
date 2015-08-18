@@ -4,13 +4,16 @@ body {
   font-size: 1.5em;
   font-family: 'Montserrat', sans-serif; }
 
+.container-fluid {
+  background-color: rgba(0, 0, 0, 0.7); }
+
 .thumbnail {
   height: 350px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 100%; }
   .thumbnail:hover {
-    background: rgba(255, 255, 255, 0.9); }
+    background: white; }
   .thumbnail ol {
     text-align: left;
     margin: none; }
