@@ -1,13 +1,19 @@
+body, html {
+  height: 100%;
+}
 body {
   background-image: url('http://1.bp.blogspot.com/-UhP8to7vsho/T0V7Dph6uwI/AAAAAAAAACI/E1i4Q4sIcCg/s1600/Tree+of+Life+II.png'); 
   background-size: cover;
   font-size: 1.5em;
   font-family: 'Montserrat', sans-serif;
 }
-.container-fluid {
-  background-color: rgba(0,0,0, .7);
-  
+#main-wrapper {
+  background-color: rgba(0,0,0, .7); 
 }
+h1 {
+  color: #FFF;
+}
+
 .thumbnail {
   height: 350px;
   text-align: center;
@@ -25,3 +31,10 @@ body {
   }
 }
 
+#editFamilyMemberDiv {
+  width: 80%;
+  margin: 5% 10% 5% 10%;
+  display: none;
+  background: rgba(255,255,255,1);
+  border: 1px solid #000;
+}

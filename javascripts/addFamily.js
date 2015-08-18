@@ -8,7 +8,7 @@ define([], function(){
       age: $("#age").val(),
       sex: $('input:checked').val(),
       skills: skillsArray
-    }
+    };
 
     ref.child('family').push(famMember);
     

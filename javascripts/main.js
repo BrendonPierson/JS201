@@ -17,8 +17,10 @@ requirejs.config({
 });
 
 requirejs(["jquery", "hbs", "bootstrap", "lodash", "firebase", 
-  "populateHTML", "addFamily", "delete"], 
-  function($, Handlebars, bootstrap, _, _firebase, populateHTML, addFamily, deleteFam){
+  "populateHTML", "addFamily", "delete", "editFamily"], 
+  function($, Handlebars, bootstrap, _, _firebase, populateHTML, 
+    addFamily, deleteFam, editFamily){
+
     var ref = new Firebase("https://nss-brendon-family.firebaseio.com/");
 
     ref.child('family').on('value', function(data){
@@ -27,15 +29,26 @@ requirejs(["jquery", "hbs", "bootstrap", "lodash", "firebase",
       populateHTML.putFamilyInHTML(family);
 
     $("#family-members").on('click', '#deleteFamilyMember', function(){
-      console.log("delete pressed");
       deleteFam.deleteFamilyMember($(this).siblings("h3").text(), family);
     });
 
-    }); //end fb data snapshot function
+
+    $("#family-members").on('click', '#editFamilyMember', function(){
+      editFamily.displayEditForm($(this).parent().siblings("h3").text(), family);
+    });
+
 
     $("#addFamilyMember").click(function(){
       addFamily.addFamilyMember(ref);
     });
+
+    $("#saveFamilyMember").click(function(){
+      editFamily.submitEditForm(family);
+    });
+
+    }); //end fb data snapshot function
+
+
 
   } //end require js function
 );//end require js 
