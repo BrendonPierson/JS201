@@ -33,7 +33,9 @@ requirejs(["jquery", "hbs", "bootstrap", "lodash", "firebase",
 
     }); //end fb data snapshot function
 
-    $("#addFamilyMember").click(addFamily.addFamilyMember);
+    $("#addFamilyMember").click(function(){
+      addFamily.addFamilyMember(ref);
+    });
 
   } //end require js function
 );//end require js 
