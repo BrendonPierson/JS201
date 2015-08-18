@@ -1,0 +1,23 @@
+body {
+  background-image: url('http://1.bp.blogspot.com/-UhP8to7vsho/T0V7Dph6uwI/AAAAAAAAACI/E1i4Q4sIcCg/s1600/Tree+of+Life+II.png'); 
+  background-size: cover;
+  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+}
+.thumbnail {
+  height: 350px;
+  text-align: center;
+  background: rgba(255,255,255,.5);
+  border-radius: 100%;
+  &:hover {
+    background: rgba(255,255,255,.9);
+  }
+  ol {
+    text-align: left;
+    margin: none;
+    li {
+      margin: none;
+    }
+  }
+}
+
