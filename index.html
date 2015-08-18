@@ -8,12 +8,66 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div id="family-members">
+	<h1> Pierson Family</h1>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+	 Add Family Member
+	</button>
+	<div id="editFamilyMember">
+	</div>
+	<div class="container-fluid">
+		<div id="family-members" class="row">
+		</div>
 	</div>
 
-	<!--scripts uncomment if needed-->
-	<!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-	<script src="javascripts/main.js"></script>
+
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Add a New Family Member</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	        	<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">Name</span>
+						  <input id="name" type="text" class="form-control" placeholder="Johny Appleseed" aria-describedby="basic-addon1">
+						</div>
+						<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1">Age</span>
+						  <input id="age" type="number" class="form-control" placeholder="21" aria-describedby="basic-addon1">
+						</div>
+						<div class="input-group">
+							<div class="radio-inline">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="optionsRadios1" value="Male">
+							    Male
+							  </label>
+							</div>
+							<div class="radio-inline">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="optionsRadios2" value="Female" checked>
+							    Female
+							  </label>
+							</div>
+						</div>
+						<label for="skills">Skills</label>
+						<textarea id="skills" name="skills" class="form-control" rows="3"></textarea>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button id="addFamilyMember" type="button" class="btn btn-primary">Add Family Member</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<script data-main="javascripts/main"
+	        src="bower_components/requirejs/require.js"></script>
 </body>
 </html>
