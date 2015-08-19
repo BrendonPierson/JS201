@@ -41,6 +41,9 @@ requirejs(["jquery", "hbs", "bootstrap", "lodash", "firebase",
       addFamily.addFamilyMember(ref);
     });
 
+    $('#myModal').on('shown.bs.modal', function (e) {
+      $("input[value='Male']").prop('checked', true);
+    });
 
 
 

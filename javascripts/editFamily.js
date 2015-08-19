@@ -15,9 +15,9 @@ define(["jquery", "lodash", "firebase"], function($, _, _firebase){
       $("#skills").val(data[key].skills);
 
       if (data[key].sex === 'Male'){
-        $("input[value='Male']").attr('checked', 'checked');
+        $("input[value='Male']").prop('checked', true);
       } else {
-        $("input[value='Female']").attr('checked', 'checked');
+        $("input[value='Female']").prop('checked', true);
       }
     },
     submitEditForm: function(data){
