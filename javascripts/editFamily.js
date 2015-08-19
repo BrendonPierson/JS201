@@ -45,6 +45,7 @@ define(["jquery", "lodash", "firebase"], function($, _, _firebase){
       $("#name").val('');
       $("#age").val('');
       $("#skills").val('');
+      $("input:checked").prop('checked', false);
       $('#editFamilyMemberDiv').slideUp('slow');
       $("#family-members").slideDown('slow');
     }

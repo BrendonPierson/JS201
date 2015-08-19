@@ -37,6 +37,9 @@ requirejs(["jquery", "hbs", "bootstrap", "lodash", "firebase",
       editFamily.displayEditForm($(this).parent().siblings("h3").text(), family);
     });
 
+    $("#addFamilyMember").click(function(){
+      addFamily.addFamilyMember(ref);
+    });
 
 
 
@@ -47,9 +50,6 @@ requirejs(["jquery", "hbs", "bootstrap", "lodash", "firebase",
 
     }); //end fb data snapshot function
 
-    $("#addFamilyMember").click(function(){
-      addFamily.addFamilyMember(ref);
-    });
 
   } //end require js function
 );//end require js 

@@ -15,9 +15,9 @@ define(["jquery", "firebase"], function($, _firebase){
       var Ref = new Firebase('https://nss-brendon-family.firebaseio.com/family/');
       Ref.push(famMember);
     
-      $("#name").val('');
-      $("#age").val('');
-      $("#skills").val('');
+      $("#nameToAdd").val('');
+      $("#ageToAdd").val('');
+      $("#skillsToAdd").val('');
       $('#myModal').modal('hide');
     }
   };
